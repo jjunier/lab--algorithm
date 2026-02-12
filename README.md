@@ -65,11 +65,3 @@
 🔍 feat: Solve BOJ 1966 with Queue [Simulation]
 🧠 feat: Study BOJ 1005 (ACM Craft) [DP + Topological Sort]
 ```
-
-
-
-## 🌴브랜치 전략
-
--   `main`: 완성된 풀이와 자료가 병합되는 기본 브랜치
--   `feature/{출제처}`: 작업 브랜치
-    -   출제처: `boj`, `prg`(programmers), `let`(leetcode)
