@@ -1,6 +1,7 @@
 import sys
 
 input = sys.stdin.readline
+output = sys.stdout.write
 
 def count_good_numbers() -> None:
     number_count = int(input().strip())
@@ -34,6 +35,6 @@ def count_good_numbers() -> None:
             else:
                 right -= 1
 
-    print(good_count)
+    output(str(good_count))
 
 count_good_numbers()
