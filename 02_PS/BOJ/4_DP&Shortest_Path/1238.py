@@ -2,6 +2,7 @@ import sys
 import heapq
 
 input = sys.stdin.readline
+output = sys.stdout.write
 
 def max_round_trip_time() -> None:
     village_count, road_count, party_village = map(int, input().split())
@@ -47,6 +48,6 @@ def max_round_trip_time() -> None:
         round_trip_time = go_party_distance[village] + go_home_distance[village]
         max_time = max(max_time, round_trip_time)
 
-    print(max_time)
+    output(str(max_time))
 
 max_round_trip_time()

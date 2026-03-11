@@ -2,6 +2,7 @@ import sys
 import heapq
 
 input = sys.stdin.readline
+output = sys.stdout.write
 
 def dijkstra(start_node: int, graph: list[list[tuple[int, int]]], node_count: int) -> list[int]:
     INF = 10**18
@@ -50,6 +51,6 @@ def shortest_special_path() -> None:
 
     answer = min(path_1, path_2)
 
-    print(answer if answer < INF else -1)
+    output(str(answer if answer < INF else -1))
 
 shortest_special_path()
