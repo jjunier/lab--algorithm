@@ -8,7 +8,6 @@ def dijkstra(start_node: int, graph: list[list[tuple[int, int]]], node_count: in
     INF = 10**18
     distance = [INF] * (node_count + 1)
     distance[start_node] = 0
-
     heap = [(0, start_node)]
 
     while heap:
@@ -28,15 +27,14 @@ def dijkstra(start_node: int, graph: list[list[tuple[int, int]]], node_count: in
 
 def shortest_special_path() -> None:
     node_count, edge_count = map(int, input().split())
-
     graph = [[] for _ in range(node_count + 1)]
+
     for _ in range(edge_count):
         node_a, node_b, weight = map(int, input().split())
         graph[node_a].append((node_b, weight))
         graph[node_b].append((node_a, weight))
 
     must_visit_1, must_visit_2 = map(int, input().split())
-
     dist_from_1 = dijkstra(1, graph, node_count)
     dist_from_v1 = dijkstra(must_visit_1, graph, node_count)
     dist_from_v2 = dijkstra(must_visit_2, graph, node_count)

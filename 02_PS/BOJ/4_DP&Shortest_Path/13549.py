@@ -6,13 +6,10 @@ output = sys.stdout.write
 
 def min_time_to_find_sibling() -> None:
     start_position, target_position = map(int, input().split())
-
     max_position = 100000
     INF = 10**9
-
     distance = [INF] * (max_position + 1)
     distance[start_position] = 0
-
     queue = deque([start_position])
 
     while queue:

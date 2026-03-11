@@ -6,7 +6,6 @@ output = sys.stdout.write
 
 def max_round_trip_time() -> None:
     village_count, road_count, party_village = map(int, input().split())
-
     graph = [[] for _ in range(village_count + 1)]
     reverse_graph = [[] for _ in range(village_count + 1)]
 
