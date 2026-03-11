@@ -2,6 +2,7 @@ import sys
 from collections import deque
 
 input = sys.stdin.readline
+output = sys.stdout.write
 
 def min_time_to_find_sibling() -> None:
     start_position, target_position = map(int, input().split())
@@ -18,7 +19,7 @@ def min_time_to_find_sibling() -> None:
         current_position = queue.popleft()
 
         if current_position == target_position:
-            print(distance[current_position])
+            output(str(distance[current_position]))
             return
 
         # 순간이동: 0초
